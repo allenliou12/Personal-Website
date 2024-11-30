@@ -36,4 +36,3 @@ You can view my portfolio by opening the `index.html` file in any web browser. T
 - **Theme Toggle**: Users can switch between light and dark themes.
 - **Contact Form**: A simple form for users to get in touch with me.
 - **Social Links**: Links to my GitHub and LinkedIn profiles.
-
