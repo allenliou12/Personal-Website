@@ -39,10 +39,6 @@ You can view my portfolio by opening the `index.html` file in any web browser. T
 - **Contact Form**: A simple form for users to get in touch with me.
 - **Social Links**: Links to my GitHub and LinkedIn profiles.
 
-## Contributing
-
-If you would like to contribute to this project, please fork the repository and submit a pull request.
-
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
