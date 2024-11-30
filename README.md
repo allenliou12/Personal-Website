@@ -7,7 +7,6 @@ This is my personal portfolio website showcasing my work and skills as a Full St
 - [Installation](#installation)
 - [Usage](#usage)
 - [Features](#features)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Installation
