@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional portfolio showcasing my work and skills as a developer">
+  <title>Portfolio | Your Name</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!-- Theme Toggle JS -->
+  <script src="js/themeToggle.js" defer></script>
+
+  <!-- Main JS -->
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <!-- Header/Navigation -->
+  <header class="header">
+    <nav class="nav">
+      <a href="#" class="nav__logo">Your Logo</a>
+      <div class="nav__menu">
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link">Home</a></li>
+          <li><a href="#about" class="nav__link">About</a></li>
+          <li><a href="#skills" class="nav__link">Skills</a></li>
+          <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
+          <li><a href="#contact" class="nav__link">Contact</a></li>
+          <li>
+            <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+              <i class="fas fa-moon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero__container container">
+      <h1 class="hero__title">Hi, I'm <span class="highlight">Allen!</span></h1>
+      <h2 class="hero__subtitle">Full Stack Developer</h2>
+      <p class="hero__description">
+        Versatile IT professional leveraging Python, web technologies, and machine learning to develop robust,
+        user-centric applications.
+      </p>
+      <a href="#portfolio" class="btn btn-primary">View My Work</a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about section">
+    <div class="container">
+      <h2 class="section__title">About Me</h2>
+      <div class="about__container">
+        <div class="about__content">
+          <p>
+            I'm an aspiring full-stack developer with a strong technical foundation in Python, JavaScript, and web
+            technologies.
+          </p>
+          <br>
+          <p>
+            My technical journey reflects a passionate commitment to continuous learning. From machine
+            learning projects to building web applications, I've cultivated a diverse skill set that includes
+            proficiency in Python, SQL, HTML/CSS, and modern development tools like Git and PyTorch.
+          </p>
+          <div class="about__buttons">
+            <a href="assets/Resume.pdf" class="btn btn-secondary resume-button" download>
+              <i class="fas fa-download"></i> Download Resume
+            </a>
+            <div class="social__links icon-container">
+              <a href="https://github.com/allenliou12" target="_blank" rel="noopener">
+                <i class="fab fa-github icon-large"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/allen-liou-295171175/" target="_blank" rel="noopener">
+                <i class="fab fa-linkedin icon-large"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills section">
+    <div class="container">
+      <h2 class="section__title">Skills & Technologies</h2>
+      <div class="skills__container">
+        <div class="skills__category">
+          <h3>Programming Languages</h3>
+          <div class="skills__grid">
+            <div class="skill__item">
+              <i class="fab fa-js"></i>
+              <h4>JavaScript</h4>
+              <div class="skill__level">Intermediate</div>
+            </div>
+            <div class="skill__item">
+              <i class="fas fa-database"></i>
+              <h4>SQL</h4>
+              <div class="skill__level">Intermediate</div>
+            </div>
+            <div class="skill__item">
+              <i class="fab fa-python"></i>
+              <h4>Python</h4>
+              <div class="skill__level">Intermediate</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills__category">
+          <h3>Frameworks & Libraries</h3>
+          <div class="skills__grid">
+            <div class="skill__item">
+              <i class="fab fa-react"></i>
+              <h4>React</h4>
+              <div class="skill__level">Intermediate</div>
+            </div>
+            <div class="skill__item">
+              <i class="fab fa-node-js"></i>
+              <h4>Node.js</h4>
+              <div class="skill__level">Intermediate</div>
+            </div>
+            <div class="skill__item">
+              <i class="fab fa-express"></i>
+              <h4>Express</h4>
+              <div class="skill__level">Intermediate</div>
+            </div>
+            <div class="skill__item">
+              <i class="fas fa-code"></i>
+              <h4>Django</h4>
+              <div class="skill__level">Beginner</div>
+            </div>
+            <div class="skill__item">
+              <i class="fas fa-brain"></i>
+              <h4>PyTorch</h4>
+              <div class="skill__level">Beginner</div>
+            </div>
+            <div class="skill__item">
+              <i class="fas fa-laptop-code"></i>
+              <h4>FastAI</h4>
+              <div class="skill__level">Beginner</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills__category">
+          <h3>Tools & Technologies</h3>
+          <div class="skills__grid">
+            <div class="skill__item">
+              <i class="fab fa-git"></i>
+              <h4>Git</h4>
+              <div class="skill__level">Intermediate</div>
+            </div>
+            <div class="skill__item">
+              <i class="fab fa-github"></i>
+              <h4>GitHub</h4>
+              <div class="skill__level">Intermediate</div>
+            </div>
+            <div class="skill__item">
+              <i class="fas fa-database"></i>
+              <h4>PostgreSQL</h4>
+              <div class="skill__level">Intermediate</div>
+            </div>
+            <div class="skill__item">
+              <i class="fas fa-code"></i>
+              <h4>EJS</h4>
+              <div class="skill__level">Intermediate</div>
+            </div>
+            <div class="skill__item">
+              <i class="fas fa-file-alt"></i>
+              <h4>HTML/CSS</h4>
+              <div class="skill__level">Intermediate</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills__category">
+          <h3>Professional Skills</h3>
+          <div class="skills__grid">
+            <div class="skill__item">
+              <i class="fas fa-users"></i>
+              <h4>Agile Methodologies</h4>
+              <div class="skill__level">Intermediate</div>
+            </div>
+            <div class="skill__item">
+              <i class="fas fa-project-diagram"></i>
+              <h4>Project Management</h4>
+              <div class="skill__level">Intermediate</div>
+            </div>
+            <div class="skill__item">
+              <i class="fas fa-lightbulb"></i>
+              <h4>Problem Solving</h4>
+              <div class="skill__level">Advanced</div>
+            </div>
+            <div class="skill__item">
+              <i class="fas fa-book-reader"></i>
+              <h4>Continuous Learning</h4>
+              <div class="skill__level">Advanced</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio section">
+    <div class="container">
+      <h2 class="section__title">My Projects</h2>
+      <div class="portfolio__filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="app">App</button>
+        <button class="filter-btn" data-filter="other">Other</button>
+      </div>
+
+      <!-- Add your MERN Keeper project here -->
+      <article class="portfolio__item" data-category="app">
+        <div class="portfolio__img">
+          <img src="assets/Keeper App.png" alt="MERN Keeper">
+        </div>
+        <div class="portfolio__content">
+          <h3>MERN Keeper</h3>
+          <p>A note-taking application built with the MERN stack (MongoDB, Express, React, Node.js).</p>
+          <div class="portfolio__tech">
+            <span>MongoDB</span>
+            <span>Express</span>
+            <span>React</span>
+            <span>Node.js</span>
+          </div>
+          <div class="portfolio__links">
+            <a href="https://github.com/allenliou12/Keeper-Mern-App" target="_blank" rel="noopener"
+              class="btn btn-sm btn-secondary">
+              <i class="fab fa-github icon-large"></i> Code
+            </a>
+          </div>
+        </div>
+      </article>
+      <!-- Add more portfolio items as needed -->
+    </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <h2 class="section__title">Get In Touch</h2>
+      <div class="contact__container">
+        <form id="contact-form" class="contact__form">
+          <div class="form__group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form__group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form__group">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          <div class="form__group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+        <div class="contact__info">
+          <div class="contact__card">
+            <i class="fas fa-envelope"></i>
+            <h3>Email</h3>
+            <a href="mailto:allenliou12@gmail.com">allenliou12@gmail.com</a>
+          </div>
+          <div class="contact__card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Location</h3>
+            <p>Skudai, Johor</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__content">
+        <p>&copy; 2024 Liou Jun Yi. All rights reserved.</p>
+        <div class="social__links">
+          <a href="https://github.com/allenliou12" target="_blank" rel="noopener">
+            <i class="fab fa-github icon-large"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/allen-liou-295171175/" target="_blank" rel="noopener">
+            <i class="fab fa-linkedin icon-large"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" class="back-to-top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- Add these scripts before closing body tag -->
+  <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/scroll.js"></script>
+</body>
+
+</html>
