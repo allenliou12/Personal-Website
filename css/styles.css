@@ -634,3 +634,12 @@ a:hover {
     font-size: 2rem;
   }
 }
+
+/* ---- particles.js container ---- */
+#particles-js {
+  position: absolute; /* Position it absolutely to cover the entire viewport */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+}

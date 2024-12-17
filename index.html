@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Professional portfolio showcasing my work and skills as a developer">
-  <title>Portfolio | Your Name</title>
+  <title>Portfolio | Allen </title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
@@ -24,7 +24,6 @@
 
 
   <!-- Main JS -->
-  <script src="js/main.js" defer></script>
   <script src="js/typewriter.js"></script>
 </head>
 
@@ -49,19 +48,18 @@
     </nav>
   </header>
 
+
   <!-- Hero Section -->
+
   <section id="home" class="hero">
+    <div id="particles-js"></div> <!-- Particles container inside the hero section -->
     <div class="hero__container container">
       <h1 class="hero__title">Hi, I'm <span class="highlight">Allen!</span></h1>
-
-      <!-- Move the typewriter subtitle to a more prominent position -->
       <h2 id="typewriter-text" class="hero__typewriter-subtitle"></h2>
-
-      <!-- Keep your existing description, but make it slightly smaller -->
       <p class="hero__description">
         Aspiring IT professional with a strong foundation in Python, web technologies, and machine learning, committed
-        to developing user-centric applications. Passionate about continuous learning and technological innovation, I am
-        eager to translate my skills into impactful solutions.
+        to developing user-centric applications. Passionate about continuous learning and technological innovation, I
+        am eager to translate my skills into impactful solutions.
       </p>
       <a href="#portfolio" class="btn btn-primary">View My Work</a>
     </div>
@@ -256,7 +254,7 @@
           </div>
         </div>
       </article>
-      <!-- Add more portfolio items as needed -->
+
     </div>
     </div>
   </section>
@@ -325,8 +323,15 @@
 
   <!-- Add these scripts before closing body tag -->
   <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
+  <script>particlesJS.load('particles-js', 'assets/particlesjs-config.json', function () {
+      console.log('callback - particles.js config loaded');
+    });
+  </script>
   <script src="js/theme.js"></script>
   <script src="js/scroll.js"></script>
+  <script src="./particles.js"></script>
+  <script src="js/app.js"></script>
+
 </body>
 
 </html>
