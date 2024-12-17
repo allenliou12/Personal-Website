@@ -37,6 +37,10 @@ body {
   padding: 0 1rem;
 }
 
+.section {
+  padding: 5rem 0;
+}
+
 /* Header */
 .header {
   position: fixed;
@@ -80,6 +84,11 @@ body {
 
 .nav__link:hover {
   color: var(--primary-color);
+}
+
+p {
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
 /* Sections */
@@ -139,6 +148,15 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin: 0.5rem;
+}
+
+.skill__item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill__item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .skill__item {
@@ -279,6 +297,11 @@ body {
   border-radius: 0.5rem;
 }
 
+.form__group input:focus,
+.form__group textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
 /* Footer */
 .footer {
   background: var(--section-bg);
@@ -524,8 +547,15 @@ body {
 }
 
 /* Button hover states */
+
+.btn {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
 .btn:hover {
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
 }
 
 /* Add smooth transitions */
@@ -559,4 +589,48 @@ a {
 
 a:hover {
   color: #014a63; /* Change color on hover */
+}
+
+.hero__typewriter-subtitle {
+  font-size: 2.5rem; /* Large, attention-grabbing size */
+  color: var(--accent-color); /* Use a vibrant color */
+  margin-bottom: 1rem;
+  min-height: 60px; /* Prevent layout shift */
+}
+
+#typewriter-text {
+  min-height: 1.5em; /* Prevent layout shift */
+  display: inline-block;
+}
+
+.type-cursor {
+  color: var(--accent-color);
+  font-weight: bold;
+  opacity: 1;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink-caret {
+  0%,
+  100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--accent-color);
+  }
+}
+
+.hero__title,
+.hero__description,
+#typewriter-text {
+  overflow: hidden;
+  border-right: 2px solid var(--accent-color);
+  animation: blink-caret 0.7s step-end infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero__typewriter-subtitle {
+    font-size: 2rem;
+  }
 }

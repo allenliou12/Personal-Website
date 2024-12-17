@@ -22,8 +22,10 @@
   <!-- Theme Toggle JS -->
   <script src="js/themeToggle.js" defer></script>
 
+
   <!-- Main JS -->
   <script src="js/main.js" defer></script>
+  <script src="js/typewriter.js"></script>
 </head>
 
 <body>
@@ -51,7 +53,11 @@
   <section id="home" class="hero">
     <div class="hero__container container">
       <h1 class="hero__title">Hi, I'm <span class="highlight">Allen!</span></h1>
-      <h2 class="hero__subtitle">Full Stack Developer</h2>
+
+      <!-- Move the typewriter subtitle to a more prominent position -->
+      <h2 id="typewriter-text" class="hero__typewriter-subtitle"></h2>
+
+      <!-- Keep your existing description, but make it slightly smaller -->
       <p class="hero__description">
         Aspiring IT professional with a strong foundation in Python, web technologies, and machine learning, committed
         to developing user-centric applications. Passionate about continuous learning and technological innovation, I am
@@ -78,7 +84,7 @@
             proficiency in Python, SQL, HTML/CSS, and modern development tools like Git and PyTorch.
           </p>
           <div class="about__buttons">
-            <a href="assets/Resume.pdf" class="btn btn-secondary resume-button" download>
+            <a href="assets/Resume.pdf" class="btn btn-secondary " download>
               <i class="fas fa-download"></i> Download Resume
             </a>
             <div class="social__links icon-container">
