@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const textContainer = document.querySelector('.about__text-container');
   const outputs = document.querySelectorAll('.about__text');
   let isAnimating = false;
+  let isComplete = false;  // New flag to track if typing is complete
   let activeTypewriters = [];
   let allTimeouts = [];
 
@@ -41,12 +42,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Reset states
     isAnimating = false;
+    isComplete = false;  // Reset the complete flag
     content.classList.remove('active');
     console.log('Reset complete');
   };
 
+  // Handle visibility change
+  document.addEventListener('visibilitychange', () => {
+    if (document.hidden && isAnimating) {
+      forceReset();
+    }
+  });
+
+  // Handle tab/window focus
+  window.addEventListener('blur', () => {
+    if (isAnimating) {
+      forceReset();
+    }
+  });
+
   terminal.addEventListener('click', () => {
-    console.log('Terminal clicked, isAnimating:', isAnimating);
+    console.log('Terminal clicked, isAnimating:', isAnimating, 'isComplete:', isComplete);
+
+    // If typing is complete, reset everything
+    if (isComplete) {
+      forceReset();
+      return;
+    }
 
     // If animation is running, reset everything
     if (isAnimating) {
@@ -100,6 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
               output.classList.remove('typing');
               output.classList.add('finished');
               isAnimating = false;
+              isComplete = true;  // Set complete flag when typing is done
             }
           }, textDuration));
         }, 1000 * (index + 1)));
