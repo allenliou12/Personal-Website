@@ -2,13 +2,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const themeToggle = document.getElementById('theme-toggle');
   const themeIcon = themeToggle.querySelector('i');
 
-  // Check for saved theme preference or default to system preference
+  // Check for saved theme preference or default to dark
   const getPreferredTheme = () => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme) {
       return savedTheme;
     }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    return 'dark';
   };
 
   // Function to set theme
