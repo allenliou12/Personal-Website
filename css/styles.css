@@ -113,6 +113,9 @@ p {
 
 .hero__container {
   text-align: center;
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
 }
 
 .hero__title {
@@ -551,6 +554,7 @@ body {
 .btn {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  z-index: 2;
 }
 
 .btn:hover {
@@ -642,4 +646,25 @@ a:hover {
   height: 100%; /* Full height */
   top: 0; /* Align to the top */
   left: 0; /* Align to the left */
+  z-index: 0;
+  pointer-events: auto;
+}
+
+.hero__container {
+  position: relative;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Make specific elements within hero__container clickable */
+.hero__container h1,
+.hero__container h2,
+.hero__container p,
+.hero__container .btn {
+  pointer-events: auto;
+}
+
+.btn {
+  position: relative;
+  z-index: 1;
 }
