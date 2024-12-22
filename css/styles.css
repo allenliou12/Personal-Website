@@ -20,7 +20,7 @@
   --header-bg: rgba(248, 250, 252, 0.8);
   --header-height: 5rem;
   --title-font: "Space Grotesk", sans-serif;
-  --body-font: "Inter", sans-serif;
+  --body-font: "Space Grotesk", sans-serif;
 }
 
 body {
@@ -150,35 +150,6 @@ p {
   padding-left: 0;
 }
 
-/* Skills Section */
-.section__title {
-  margin-top: 1rem;
-}
-
-.skills__grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin: 0.5rem;
-}
-
-.skill__item {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.skill__item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.skill__item {
-  padding: 2rem;
-  border: 1px solid var(--border-color);
-  border-radius: 1rem;
-  text-align: center;
-  background: var(--card-bg);
-}
-
 /* Portfolio Section */
 .portfolio__filters {
   display: flex;
@@ -207,6 +178,7 @@ p {
 }
 
 .portfolio__item {
+  position: relative;
   background: var(--background);
   border-radius: 1rem;
   overflow: hidden;
@@ -225,15 +197,50 @@ p {
   height: 240px;
 }
 
-.portfolio__img img {
+.cover-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-.portfolio__item:hover .portfolio__img img {
+.portfolio__img:hover .cover-image {
   transform: scale(1.05);
+}
+
+.play-button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio__img:hover .play-button-overlay {
+  opacity: 1;
+}
+
+.video-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.portfolio__img:hover .video-description {
+  opacity: 1;
 }
 
 .portfolio__content {
@@ -502,24 +509,6 @@ p {
   font-family: var(--body-font);
   font-weight: 500;
   letter-spacing: 0.01em;
-}
-
-/* Dark theme colors */
-[data-theme="dark"] {
-  --primary-color: #454a4d; /* Dark gray for primary elements */
-  --secondary-color: #2b2b2b; /* Darker gray for secondary elements */
-  --text-color: #d4d1cb; /* Light gray for main text */
-  --light-text: #cbc6c0; /* Slightly lighter gray for less emphasized text */
-  --background: #0e0f0f; /* Very dark gray for the main background */
-  --card-bg: #0b0c0d; /* Darker gray for card elements */
-  --section-bg: #202224; /* Dark gray for sections */
-  --border-color: #746b5f; /* Medium gray for borders */
-  --header-bg: rgba(
-    14,
-    15,
-    15,
-    0.9
-  ); /* Dark gray with slight transparency for header */
 }
 
 /* Update component backgrounds */
@@ -1222,4 +1211,229 @@ a:hover {
   50% {
     opacity: 0;
   }
+}
+
+.skills-and-technologies-section {
+  margin: 10px 0; /* Reduce margin to minimize gap */
+  padding: 10px 0; /* Optional: Add some padding for spacing */
+}
+
+.tag {
+  background: #1e1e1e; /* Dark background for tags */
+  color: #ffffff; /* White text */
+  padding: 8px 12px; /* Padding for tags */
+  border-radius: 20px; /* Rounded corners */
+  display: inline-flex; /* Use inline-flex to keep icon and text aligned */
+  align-items: center; /* Center icon and text */
+  margin-bottom: 10px; /* Space between tags */
+  transition: background 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.tag i {
+  margin-right: 5px; /* Space between icon and text */
+}
+
+.tag:hover {
+  background: #35c035; /* Change background on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+.close-video {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  z-index: 1000; /* Ensure the button is above the video */
+}
+
+.portfolio__item.hidden {
+  display: none;
+}
+
+.popup-video {
+  display: block; /* Ensure the link is block-level for full area */
+}
+
+.play-button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border-radius: 50%;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Hidden by default */
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.portfolio__img:hover .play-button-overlay {
+  opacity: 1; /* Show on hover */
+}
+
+.mfp-container {
+  transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.mfp-open .mfp-container {
+  transform: scale(1.05); /* Scale up when opened */
+}
+
+/*Link Section */
+.links {
+  padding: 40px 0; /* Add padding for spacing */
+}
+
+.links__content {
+  text-align: center; /* Center the content */
+}
+
+.links__list {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+}
+
+.links__list li {
+  margin: 10px 0; /* Add margin between links */
+}
+
+.links__list a {
+  text-decoration: none; /* Remove underline */
+  color: #f3f3f3; /* Link color */
+  font-weight: bold; /* Bold text */
+}
+
+.links__list a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px; /* Space between cards */
+}
+
+.card {
+  background-color: var(--card-background); /* Darker card background */
+  color: var(--text-color); /* White text for headings */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Increased shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px;
+  width: 250px; /* Fixed width for cards */
+  text-align: center; /* Center text */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Light border for contrast */
+}
+
+.card:hover {
+  transform: scale(1.05); /* Scale up slightly on hover */
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.9); /* Darker shadow on hover */
+}
+
+.card-icon {
+  font-size: 40px; /* Icon size */
+  color: #ffffff; /* Icon color */
+  margin-bottom: 10px; /* Space below icon */
+}
+
+.card-content h3 {
+  margin: 10px 0; /* Space above and below heading */
+}
+
+.card-content p {
+  color: #ffffff; /* Text color */
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #1e1e1e; /* Button background */
+  color: #fff; /* Button text color */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+.btn:hover {
+  background-color: #35c035; /* Darker shade on hover */
+}
+
+/* Default styles (Dark Theme) */
+.links {
+  background-color: var(--background-color); /* Use variable for background */
+  color: var(--text-color); /* Use variable for text color */
+  padding: 40px 0; /* Add padding for spacing */
+}
+
+.card {
+  background-color: var(
+    --card-background
+  ); /* Use variable for card background */
+  color: var(--text-color); /* Use variable for headings */
+}
+
+.card-content p {
+  color: var(--description-color); /* Use variable for description text */
+}
+
+.btn {
+  background-color: #ffffff; /* Use variable for button background */
+  color: var(--text-color); /* Use variable for button text color */
+}
+
+.btn:hover {
+  background-color: #35c035; /* Darker shade on hover */
+}
+
+/* Light Theme Styles */
+[data-theme="light"] .links {
+  background-color: #f9f9f9; /* Light background for the links section */
+  color: #333333; /* Dark text color for contrast */
+}
+
+[data-theme="light"] .card {
+  background-color: #ffffff; /* White card background */
+  color: #333333; /* Dark text for headings */
+}
+
+[data-theme="light"] .card-content p {
+  color: #666666; /* Darker gray for description text */
+}
+
+[data-theme="light"] .btn {
+  background-color: #0056b3; /* Darker button background for light theme */
+  color: #ffffff; /* Button text color */
+}
+
+[data-theme="light"] .card-icon {
+  color: #0056b3; /* Button text color */
+}
+
+[data-theme="light"] .btn:hover {
+  background-color: #004494; /* Darker shade on hover */
+}
+
+.btn {
+  background: #1e1e1e; /* Dark background for buttons */
+  color: #ffffff; /* White text */
+  padding: 10px 15px; /* Padding for buttons */
+  border-radius: 20px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  display: inline-flex; /* Use inline-flex to keep icon and text aligned */
+  align-items: center; /* Center icon and text */
+  transition: background 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.btn:hover {
+  background: #35c035; /* Change background on hover */
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  color: #ffffff; /* Keep text color white on hover */
 }

@@ -1,16 +1,8 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const navToggle = document.getElementById('nav-toggle');
-  const navList = document.getElementById('nav-list');
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleButton = document.getElementById('navbar-toggle');
+  const navbarMenu = document.getElementById('navbar-menu');
 
-  navToggle.addEventListener('click', () => {
-    navList.classList.toggle('show-menu');
-  });
-
-  // Close menu when clicking a nav link
-  const navLinks = document.querySelectorAll('.nav__link');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      navList.classList.remove('show-menu');
-    });
+  toggleButton.addEventListener('click', function () {
+    navbarMenu.classList.toggle('active'); // Toggle the active class
   });
 });

@@ -27,9 +27,20 @@
   <!-- Main JS -->
   <script src="js/typewriter.js" defer></script>
 
-  <!-- Add this in your head section -->
+  <!-- Terminal JS -->
   <script src="js/terminal.js" defer></script>
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tagify/4.9.1/tagify.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tagify/4.9.1/tagify.min.js"></script>
+
+  <!-- Magnific Popup -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
+
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  </body>
+</head>
 </head>
 
 <body>
@@ -43,8 +54,8 @@
         <ul class="nav__list" id="nav-list">
           <li><a href="#home" class="nav__link">Home</a></li>
           <li><a href="#about" class="nav__link">About</a></li>
-          <li><a href="#skills" class="nav__link">Skills</a></li>
           <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
+          <li><a href="#links" class="nav__link">Links</a></li>
           <li><a href="#contact" class="nav__link">Contact</a></li>
           <li>
             <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
@@ -73,238 +84,179 @@
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="about section">
-    <div class="about__container container">
-      <div class="about__content">
-        <div class="code-block animate-on-scroll">
-          <span class="code-comment">// About Me</span>
-          <div class="code-line">
-            <span class="code-keyword">const</span>
-            <span class="code-variable">developer</span> = {
+  <!-- About and Skills Section -->
+  <div class="about-skills-container">
+    <!-- About Section -->
+    <section id="about" class="about section">
+      <div class="about__container container">
+        <div class="about__content">
+          <div class="code-block animate-on-scroll">
+            <span class="code-comment">// About Me</span>
+            <div class="code-line">
+              <span class="code-keyword">const</span>
+              <span class="code-variable">developer</span> = {
+            </div>
+            <div class="code-line">
+              <span class="code-property">name:</span>
+              <span class="code-string">'Allen Liou'</span>,
+            </div>
+            <div class="code-line">
+              <span class="code-property">role:</span>
+              <span class="code-string">'Software Engineer'</span>,
+            </div>
+            <div class="code-line">
+              <span class="code-property">location:</span>
+              <span class="code-string">'Johor, Malaysia'</span>,
+            </div>
+            <div class="code-line">
+              <span class="code-property">education:</span>
+              <span class="code-string">'Masters in Information Technology'</span>
+            </div>
+            <div class="code-line">};</div>
           </div>
-          <div class="code-line">
-            <span class="code-property">name:</span>
-            <span class="code-string">'Allen Liou'</span>,
-          </div>
-          <div class="code-line">
-            <span class="code-property">role:</span>
-            <span class="code-string">'Software Engineer'</span>,
-          </div>
-          <div class="code-line">
-            <span class="code-property">location:</span>
-            <span class="code-string">'Johor, Malaysia'</span>,
-          </div>
-          <div class="code-line">
-            <span class="code-property">education:</span>
-            <span class="code-string">'Masters in Information Technology'</span>
-          </div>
-          <div class="code-line">};</div>
-        </div>
 
-        <div class="terminal-window">
-          <div class="terminal-header" id="terminal-header">
-            <span class="terminal-button"></span>
-            <span class="terminal-button"></span>
-            <span class="terminal-button"></span>
-          </div>
-          <div class="terminal-content" id="terminal-content">
-            <div class="terminal-prompt">
-              <span class="prompt-symbol">visitor@portfolio:~$</span>
-              <span id="terminal-command" class="command"></span>
+          <div class="terminal-window">
+            <div class="terminal-header" id="terminal-header">
+              <span class="terminal-button"></span>
+              <span class="terminal-button"></span>
+              <span class="terminal-button"></span>
             </div>
-            <div class="about__text-container hidden">
-              <p class="about__text terminal-output"></p>
-              <p class="about__text terminal-output"></p>
+            <div class="terminal-content" id="terminal-content">
+              <div class="terminal-prompt">
+                <span class="prompt-symbol">visitor@portfolio:~$</span>
+                <span id="terminal-command" class="command"></span>
+              </div>
+              <div class="about__text-container hidden">
+                <p class="about__text terminal-output"></p>
+                <p class="about__text terminal-output"></p>
+              </div>
+            </div>
+            <div class="terminal-prompt-overlay">
+              <i class="fas fa-terminal"></i>
+              <span>Click to read more about me</span>
             </div>
           </div>
-          <div class="terminal-prompt-overlay">
-            <i class="fas fa-terminal"></i>
-            <span>Click to read more about me</span>
-          </div>
-        </div>
-      </div>
+          <!-- Skills and Technologies Section -->
+          <div class="skills-and-technologies-section">
+            <h3>Featured skills</h3>
+            <div class="tags-container animate-on-scroll" id="skills-tags">
+              <span class="tag"><i class="fab fa-js"></i> JavaScript</span>
+              <span class="tag"><i class="fab fa-python"></i> Python</span>
+              <span class="tag"><i class="fas fa-database"></i> SQL</span>
+              <span class="tag"><i class="fab fa-react"></i> React</span>
+              <span class="tag"><i class="fab fa-node-js"></i> Node.js</span>
+              <span class="tag"><i class="fab fa-github"></i> GitHub</span>
 
-      <!-- <div class="about__img-container animate-on-scroll"> -->
-      <!-- <div class="terminal-window">
-        <div class="terminal-header">
-          <span class="terminal-button"></span>
-          <span class="terminal-button"></span>
-          <span class="terminal-button"></span>
-        </div> -->
-      <!-- <div class="terminal-content">
-            <img src="assets/Cover photo.jpeg" alt="About Image" class="about__img">
-          </div> -->
-    </div>
-    </div>
-    </div>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="skills section">
-    <div class="container">
-      <h2 class="section__title">Skills & Technologies</h2>
-      <div class="skills__container">
-        <div class="skills__category">
-          <h3>Programming Languages</h3>
-          <div class="skills__grid">
-            <div class="skill__item">
-              <i class="fab fa-js"></i>
-              <h4>JavaScript</h4>
-              <div class="skill__level">Intermediate</div>
-            </div>
-            <div class="skill__item">
-              <i class="fas fa-database"></i>
-              <h4>SQL</h4>
-              <div class="skill__level">Intermediate</div>
-            </div>
-            <div class="skill__item">
-              <i class="fab fa-python"></i>
-              <h4>Python</h4>
-              <div class="skill__level">Intermediate</div>
             </div>
           </div>
         </div>
-
-        <div class="skills__category">
-          <h3>Frameworks & Libraries</h3>
-          <div class="skills__grid">
-            <div class="skill__item">
-              <i class="fab fa-react"></i>
-              <h4>React</h4>
-              <div class="skill__level">Intermediate</div>
-            </div>
-            <div class="skill__item">
-              <i class="fab fa-node-js"></i>
-              <h4>Node.js</h4>
-              <div class="skill__level">Intermediate</div>
-            </div>
-            <div class="skill__item">
-              <i class="fab fa-express"></i>
-              <h4>Express</h4>
-              <div class="skill__level">Intermediate</div>
-            </div>
-            <div class="skill__item">
-              <i class="fas fa-code"></i>
-              <h4>Django</h4>
-              <div class="skill__level">Beginner</div>
-            </div>
-            <div class="skill__item">
-              <i class="fas fa-brain"></i>
-              <h4>PyTorch</h4>
-              <div class="skill__level">Beginner</div>
-            </div>
-            <div class="skill__item">
-              <i class="fas fa-laptop-code"></i>
-              <h4>FastAI</h4>
-              <div class="skill__level">Beginner</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills__category">
-          <h3>Tools & Technologies</h3>
-          <div class="skills__grid">
-            <div class="skill__item">
-              <i class="fab fa-git"></i>
-              <h4>Git</h4>
-              <div class="skill__level">Intermediate</div>
-            </div>
-            <div class="skill__item">
-              <i class="fab fa-github"></i>
-              <h4>GitHub</h4>
-              <div class="skill__level">Intermediate</div>
-            </div>
-            <div class="skill__item">
-              <i class="fas fa-database"></i>
-              <h4>PostgreSQL</h4>
-              <div class="skill__level">Intermediate</div>
-            </div>
-            <div class="skill__item">
-              <i class="fas fa-code"></i>
-              <h4>EJS</h4>
-              <div class="skill__level">Intermediate</div>
-            </div>
-            <div class="skill__item">
-              <i class="fas fa-file-alt"></i>
-              <h4>HTML/CSS</h4>
-              <div class="skill__level">Intermediate</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills__category">
-          <h3>Professional Skills</h3>
-          <div class="skills__grid">
-            <div class="skill__item">
-              <i class="fas fa-users"></i>
-              <h4>Agile Methodologies</h4>
-              <div class="skill__level">Intermediate</div>
-            </div>
-            <div class="skill__item">
-              <i class="fas fa-project-diagram"></i>
-              <h4>Project Management</h4>
-              <div class="skill__level">Intermediate</div>
-            </div>
-            <div class="skill__item">
-              <i class="fas fa-lightbulb"></i>
-              <h4>Problem Solving</h4>
-              <div class="skill__level">Advanced</div>
-            </div>
-            <div class="skill__item">
-              <i class="fas fa-book-reader"></i>
-              <h4>Continuous Learning</h4>
-              <div class="skill__level">Advanced</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
+  </div>
 
   <!-- Portfolio Section -->
-  <section id="portfolio" class="portfolio section">
+  <section id="portfolio" class="portfolio section animate-on-scroll">
     <div class="container">
-      <h2 class="section__title">My Projects</h2>
-      <div class="portfolio__filters">
+      <h2 class="section__title animate-on-scroll">My Projects</h2>
+      <div class="portfolio__filters animate-on-scroll">
         <button class="filter-btn active" data-filter="all">All</button>
         <button class="filter-btn" data-filter="web">Web</button>
         <button class="filter-btn" data-filter="app">App</button>
         <button class="filter-btn" data-filter="other">Other</button>
       </div>
 
-      <!-- Add your MERN Keeper project here -->
-      <article class="portfolio__item" data-category="app">
-        <div class="portfolio__img">
-          <img src="assets/Keeper App.png" alt="MERN Keeper">
-        </div>
-        <div class="portfolio__content">
-          <h3>MERN Keeper</h3>
-          <p>A note-taking application built with the MERN stack (MongoDB, Express, React, Node.js).</p>
-          <div class="portfolio__tech">
-            <span>MongoDB</span>
-            <span>Express</span>
-            <span>React</span>
-            <span>Node.js</span>
+      <!-- Swiper -->
+      <div class="swiper-container">
+        <div class="swiper-wrapper animate-on-scroll">
+          <div class="swiper-slide ">
+            <article class="portfolio__item" data-category="app">
+              <div class="portfolio__img">
+                <a class="popup-video" href="assets/Desktop 2024.12.21 - 10.21.10.02.mp4">
+                  <img src="assets/Keeper App.png" alt="MERN Keeper" class="cover-image" />
+                  <div class="play-button-overlay">
+                    <i class="fa-regular fa-circle-play fa-2xl fa-bounce"></i>
+                  </div>
+                  <div class="video-description">Click to watch the demo!</div>
+                </a>
+              </div>
+              <div class="portfolio__content">
+                <h3>MERN Keeper</h3>
+                <p>A note-taking application built with the MERN stack (MongoDB, Express, React, Node.js).</p>
+                <div class="portfolio__tech">
+                  <span>MongoDB</span>
+                  <span>Express</span>
+                  <span>React</span>
+                  <span>Node.js</span>
+                </div>
+                <div class="portfolio__links">
+                  <a href="https://github.com/allenliou12/Keeper-Mern-App" target="_blank" rel="noopener"
+                    class="btn btn-sm btn-secondary">
+                    <i class="fab fa-github icon-large"></i> Code
+                  </a>
+                </div>
+              </div>
+            </article>
           </div>
-          <div class="portfolio__links">
-            <a href="https://github.com/allenliou12/Keeper-Mern-App" target="_blank" rel="noopener"
-              class="btn btn-sm btn-secondary">
-              <i class="fab fa-github icon-large"></i> Code
-            </a>
-          </div>
         </div>
-      </article>
-
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+        <!-- Add Navigation -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
     </div>
     </div>
   </section>
 
+  <!-- Links and Resume Section -->
+  <section id="links" class="links section animate-on-scroll">
+    <div class="container ">
+      <h2 class="section__title animate-on-scroll">Links & Resume</h2>
+      <div class="links__content">
+        <p>Here are some useful links:</p>
+        <div class="card-container animate-on-scroll">
+          <div class="card">
+            <div class="card-icon">
+              <i class="fab fa-linkedin"></i>
+            </div>
+            <div class="card-content">
+              <h3>LinkedIn Profile</h3>
+              <p>Connect with me on LinkedIn.</p>
+              <a href="https://www.linkedin.com/in/allen-liou-295171175/" target="_blank" rel="noopener"
+                class="btn">View
+                Profile</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <i class="fab fa-github"></i>
+            </div>
+            <div class="card-content">
+              <h3>GitHub Profile</h3>
+              <p>Check out my projects on GitHub.</p>
+              <a href="https://github.com/allenliou12" target="_blank" rel="noopener" class="btn">View Profile</a>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-file-alt"></i>
+            </div>
+            <div class="card-content">
+              <h3>Download Resume</h3>
+              <p>Download my resume in PDF format.</p>
+              <a href="assets/Resume.pdf" target="_blank" rel="noopener" class="btn">Download</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Contact Section -->
-  <section id="contact" class="contact section">
+  <section id="contact" class="contact section animate-on-scroll">
     <div class="container">
-      <h2 class="section__title">Get In Touch</h2>
-      <div class="contact__container">
+      <h2 class="section__title animate-on-scroll">Get In Touch</h2>
+      <div class="contact__container animate-on-scroll">
         <form id="contact-form" class="contact__form">
           <div class="form__group">
             <label for="name">Name</label>
@@ -357,11 +309,6 @@
     </div>
   </footer>
 
-  <!-- Back to top button -->
-  <button id="back-to-top" class="back-to-top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
   <!-- Add these scripts before closing body tag -->
   <script src="https://kit.fontawesome.com/your-kit-code.js"></script>
   <script>particlesJS.load('particles-js', 'assets/particlesjs-config.json', function () {
@@ -374,7 +321,12 @@
   <script src="js/app.js"></script>
   <script src="js/nav.js"></script>
   <script src="js/scroll-animations.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js">
+  </script>
+  <script src="js/popup.js"></script> <!-- Include the popup initialization script -->
 </body>
 
 </html>
