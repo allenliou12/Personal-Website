@@ -18,6 +18,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update icon
     themeIcon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+    // Change the data-bs-theme attribute on the navbar
+    const navbar = document.querySelector('.navbar'); // Select the navbar
+    if (navbar) {
+      navbar.setAttribute('data-bs-theme', theme);
+    }
   };
 
   // Initial theme setup
