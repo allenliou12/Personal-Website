@@ -288,6 +288,7 @@ p {
   border-color: #3498db;
   outline: none;
 }
+
 /* Footer */
 .footer {
   background: var(--section-bg);
@@ -409,7 +410,8 @@ p {
 /* Add this to your existing CSS */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: var(--header-height); /* Accounts for fixed header */
+  scroll-padding-top: var(--header-height);
+  /* Accounts for fixed header */
 }
 
 /* Typography styles */
@@ -541,34 +543,45 @@ body,
 }
 
 .icon-large {
-  font-size: 2rem; /* Adjust the size as needed */
+  font-size: 2rem;
+  /* Adjust the size as needed */
 }
 
 .icon-container {
-  display: flex; /* Use flexbox layout */
-  gap: 2rem; /* Adjust the gap between icons */
+  display: flex;
+  /* Use flexbox layout */
+  gap: 2rem;
+  /* Adjust the gap between icons */
 }
 
 /* Link Styles */
 a {
-  color: #0488b4; /* Use the text color for links */
-  text-decoration: none; /* Remove underline */
-  transition: color 0.3s ease; /* Smooth transition for hover effect */
+  color: #0488b4;
+  /* Use the text color for links */
+  text-decoration: none;
+  /* Remove underline */
+  transition: color 0.3s ease;
+  /* Smooth transition for hover effect */
 }
 
 a:hover {
-  color: #014a63; /* Change color on hover */
+  color: #014a63;
+  /* Change color on hover */
 }
 
 .hero__typewriter-subtitle {
-  font-size: 2.5rem; /* Large, attention-grabbing size */
-  color: var(--accent-color); /* Use a vibrant color */
+  font-size: 2.5rem;
+  /* Large, attention-grabbing size */
+  color: var(--accent-color);
+  /* Use a vibrant color */
   margin-bottom: 1rem;
-  min-height: 60px; /* Prevent layout shift */
+  min-height: 60px;
+  /* Prevent layout shift */
 }
 
 #typewriter-text {
-  min-height: 1.5em; /* Prevent layout shift */
+  min-height: 1.5em;
+  /* Prevent layout shift */
   display: inline-block;
 }
 
@@ -580,10 +593,12 @@ a:hover {
 }
 
 @keyframes blink-caret {
+
   0%,
   100% {
     border-color: transparent;
   }
+
   50% {
     border-color: var(--accent-color);
   }
@@ -606,11 +621,16 @@ a:hover {
 
 /* ---- particles.js container ---- */
 #particles-js {
-  position: absolute; /* Position it absolutely to cover the entire viewport */
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  top: 0; /* Align to the top */
-  left: 0; /* Align to the left */
+  position: absolute;
+  /* Position it absolutely to cover the entire viewport */
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  top: 0;
+  /* Align to the top */
+  left: 0;
+  /* Align to the left */
   z-index: 0;
   pointer-events: auto;
 }
@@ -636,6 +656,7 @@ a:hover {
 
 /* Scope Bootstrap styles to navbar only */
 .bootstrap-nav {
+
   /* Navbar Styles */
   .navbar {
     background-color: var(--background);
@@ -812,6 +833,7 @@ a:hover {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -823,6 +845,7 @@ a:hover {
     opacity: 0;
     transform: translateX(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -834,6 +857,7 @@ a:hover {
     opacity: 0;
     transform: scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
@@ -1021,10 +1045,12 @@ a:hover {
 }
 
 @keyframes blink {
+
   0%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
@@ -1100,6 +1126,7 @@ a:hover {
     opacity: 0;
     transform: translateX(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -1110,15 +1137,19 @@ a:hover {
 .code-block.is-visible .code-line:nth-child(1) {
   animation-delay: 0.1s;
 }
+
 .code-block.is-visible .code-line:nth-child(2) {
   animation-delay: 0.2s;
 }
+
 .code-block.is-visible .code-line:nth-child(3) {
   animation-delay: 0.3s;
 }
+
 .code-block.is-visible .code-line:nth-child(4) {
   animation-delay: 0.4s;
 }
+
 .code-block.is-visible .code-line:nth-child(5) {
   animation-delay: 0.5s;
 }
@@ -1165,44 +1196,59 @@ a:hover {
   opacity: 1;
 }
 
-.terminal-content.active ~ .terminal-prompt-overlay {
+.terminal-content.active~.terminal-prompt-overlay {
   visibility: hidden;
   opacity: 0;
 }
 
 @keyframes blink {
+
   0%,
   100% {
     opacity: 1;
   }
+
   50% {
     opacity: 0;
   }
 }
 
 .skills-and-technologies-section {
-  margin: 10px 0; /* Reduce margin to minimize gap */
-  padding: 10px 0; /* Optional: Add some padding for spacing */
+  margin: 10px 0;
+  /* Reduce margin to minimize gap */
+  padding: 10px 0;
+  /* Optional: Add some padding for spacing */
 }
 
 .tag {
-  background: #1e1e1e; /* Dark background for tags */
-  color: #ffffff; /* White text */
-  padding: 8px 12px; /* Padding for tags */
-  border-radius: 20px; /* Rounded corners */
-  display: inline-flex; /* Use inline-flex to keep icon and text aligned */
-  align-items: center; /* Center icon and text */
-  margin-bottom: 10px; /* Space between tags */
-  transition: background 0.3s, transform 0.3s; /* Smooth transition */
+  background: #1e1e1e;
+  /* Dark background for tags */
+  color: #ffffff;
+  /* White text */
+  padding: 8px 12px;
+  /* Padding for tags */
+  border-radius: 20px;
+  /* Rounded corners */
+  display: inline-flex;
+  /* Use inline-flex to keep icon and text aligned */
+  align-items: center;
+  /* Center icon and text */
+  margin-bottom: 10px;
+  /* Space between tags */
+  transition: background 0.3s, transform 0.3s;
+  /* Smooth transition */
 }
 
 .tag i {
-  margin-right: 5px; /* Space between icon and text */
+  margin-right: 5px;
+  /* Space between icon and text */
 }
 
 .tag:hover {
-  background: #35c035; /* Change background on hover */
-  transform: scale(1.05); /* Slightly enlarge on hover */
+  background: #35c035;
+  /* Change background on hover */
+  transform: scale(1.05);
+  /* Slightly enlarge on hover */
 }
 
 .close-video {
@@ -1215,7 +1261,8 @@ a:hover {
   padding: 10px;
   cursor: pointer;
   font-size: 1.5rem;
-  z-index: 1000; /* Ensure the button is above the video */
+  z-index: 1000;
+  /* Ensure the button is above the video */
 }
 
 .portfolio__item.hidden {
@@ -1223,7 +1270,8 @@ a:hover {
 }
 
 .popup-video {
-  display: block; /* Ensure the link is block-level for full area */
+  display: block;
+  /* Ensure the link is block-level for full area */
 }
 
 .play-button-overlay {
@@ -1231,178 +1279,242 @@ a:hover {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  background: rgba(255, 255, 255, 0.8);
+  /* Semi-transparent background */
   border-radius: 50%;
   padding: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 0; /* Hidden by default */
-  transition: opacity 0.3s ease; /* Smooth transition */
+  opacity: 0;
+  /* Hidden by default */
+  transition: opacity 0.3s ease;
+  /* Smooth transition */
 }
 
 .portfolio__img:hover .play-button-overlay {
-  opacity: 1; /* Show on hover */
+  opacity: 1;
+  /* Show on hover */
 }
 
 .mfp-container {
-  transition: transform 0.3s ease; /* Smooth transition */
+  transition: transform 0.3s ease;
+  /* Smooth transition */
 }
 
 .mfp-open .mfp-container {
-  transform: scale(1.05); /* Scale up when opened */
+  transform: scale(1.05);
+  /* Scale up when opened */
 }
 
 /*Link Section */
 .links {
-  padding: 40px 0; /* Add padding for spacing */
+  padding: 40px 0;
+  /* Add padding for spacing */
 }
 
 .links__content {
-  text-align: center; /* Center the content */
+  text-align: center;
+  /* Center the content */
 }
 
 .links__list {
-  list-style: none; /* Remove default list styling */
-  padding: 0; /* Remove padding */
+  list-style: none;
+  /* Remove default list styling */
+  padding: 0;
+  /* Remove padding */
 }
 
 .links__list li {
-  margin: 10px 0; /* Add margin between links */
+  margin: 10px 0;
+  /* Add margin between links */
 }
 
 .links__list a {
-  text-decoration: none; /* Remove underline */
-  color: #f3f3f3; /* Link color */
-  font-weight: bold; /* Bold text */
+  text-decoration: none;
+  /* Remove underline */
+  color: #f3f3f3;
+  /* Link color */
+  font-weight: bold;
+  /* Bold text */
 }
 
 .links__list a:hover {
-  text-decoration: underline; /* Underline on hover */
+  text-decoration: underline;
+  /* Underline on hover */
 }
 
 .card-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px; /* Space between cards */
+  gap: 20px;
+  /* Space between cards */
 }
 
 .card {
-  background-color: var(--card-background); /* Darker card background */
-  color: var(--text-color); /* White text for headings */
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Increased shadow for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
-  border-radius: 8px; /* Rounded corners */
+  background-color: var(--card-background);
+  /* Darker card background */
+  color: var(--text-color);
+  /* White text for headings */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+  /* Increased shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Smooth transition for scaling and shadow */
+  border-radius: 8px;
+  /* Rounded corners */
   padding: 20px;
-  width: 250px; /* Fixed width for cards */
-  text-align: center; /* Center text */
-  border: 1px solid rgba(255, 255, 255, 0.1); /* Light border for contrast */
+  width: 250px;
+  /* Fixed width for cards */
+  text-align: center;
+  /* Center text */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  /* Light border for contrast */
 }
 
 .card:hover {
-  transform: scale(1.05); /* Scale up slightly on hover */
-  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.9); /* Darker shadow on hover */
+  transform: scale(1.05);
+  /* Scale up slightly on hover */
+  box-shadow: 0 6px 30px rgba(0, 0, 0, 0.9);
+  /* Darker shadow on hover */
 }
 
 .card-icon {
-  font-size: 40px; /* Icon size */
-  color: #ffffff; /* Icon color */
-  margin-bottom: 10px; /* Space below icon */
+  font-size: 40px;
+  /* Icon size */
+  color: #ffffff;
+  /* Icon color */
+  margin-bottom: 10px;
+  /* Space below icon */
 }
 
 .card-content h3 {
-  margin: 10px 0; /* Space above and below heading */
+  margin: 10px 0;
+  /* Space above and below heading */
 }
 
 .card-content p {
-  color: #ffffff; /* Text color */
+  color: #ffffff;
+  /* Text color */
 }
 
 .btn {
   display: inline-block;
   padding: 10px 15px;
-  background-color: #1e1e1e; /* Button background */
-  color: #fff; /* Button text color */
-  border-radius: 5px; /* Rounded corners */
-  text-decoration: none; /* Remove underline */
-  transition: background-color 0.3s; /* Smooth hover effect */
+  background-color: #1e1e1e;
+  /* Button background */
+  color: #fff;
+  /* Button text color */
+  border-radius: 5px;
+  /* Rounded corners */
+  text-decoration: none;
+  /* Remove underline */
+  transition: background-color 0.3s;
+  /* Smooth hover effect */
 }
 
 .btn:hover {
-  background-color: #35c035; /* Darker shade on hover */
+  background-color: #35c035;
+  /* Darker shade on hover */
 }
 
 /* Default styles (Dark Theme) */
 .links {
-  background-color: var(--background-color); /* Use variable for background */
-  color: var(--text-color); /* Use variable for text color */
-  padding: 40px 0; /* Add padding for spacing */
+  background-color: var(--background-color);
+  /* Use variable for background */
+  color: var(--text-color);
+  /* Use variable for text color */
+  padding: 40px 0;
+  /* Add padding for spacing */
 }
 
 .card {
-  background-color: var(
-    --card-background
-  ); /* Use variable for card background */
-  color: var(--text-color); /* Use variable for headings */
+  background-color: var(--card-background);
+  /* Use variable for card background */
+  color: var(--text-color);
+  /* Use variable for headings */
 }
 
 .card-content p {
-  color: var(--description-color); /* Use variable for description text */
+  color: var(--description-color);
+  /* Use variable for description text */
 }
 
 .btn {
-  background-color: #ffffff; /* Use variable for button background */
-  color: var(--text-color); /* Use variable for button text color */
+  background-color: #ffffff;
+  /* Use variable for button background */
+  color: var(--text-color);
+  /* Use variable for button text color */
 }
 
 .btn:hover {
-  background-color: #35c035; /* Darker shade on hover */
+  background-color: #35c035;
+  /* Darker shade on hover */
 }
 
 /* Light Theme Styles */
 [data-theme="light"] .links {
-  background-color: #f9f9f9; /* Light background for the links section */
-  color: #333333; /* Dark text color for contrast */
+  background-color: #f9f9f9;
+  /* Light background for the links section */
+  color: #333333;
+  /* Dark text color for contrast */
 }
 
 [data-theme="light"] .card {
-  background-color: #ffffff; /* White card background */
-  color: #333333; /* Dark text for headings */
+  background-color: #ffffff;
+  /* White card background */
+  color: #333333;
+  /* Dark text for headings */
 }
 
 [data-theme="light"] .card-content p {
-  color: #666666; /* Darker gray for description text */
+  color: #666666;
+  /* Darker gray for description text */
 }
 
 [data-theme="light"] .btn {
-  background-color: #0056b3; /* Darker button background for light theme */
-  color: #ffffff; /* Button text color */
+  background-color: #0056b3;
+  /* Darker button background for light theme */
+  color: #ffffff;
+  /* Button text color */
 }
 
 [data-theme="light"] .card-icon {
-  color: #0056b3; /* Button text color */
+  color: #0056b3;
+  /* Button text color */
 }
 
 [data-theme="light"] .btn:hover {
-  background-color: #004494; /* Darker shade on hover */
+  background-color: #004494;
+  /* Darker shade on hover */
 }
 
 .btn {
-  background: #1e1e1e; /* Dark background for buttons */
-  color: #ffffff; /* White text */
-  padding: 10px 15px; /* Padding for buttons */
-  border-radius: 20px; /* Rounded corners */
-  text-decoration: none; /* Remove underline */
-  display: inline-flex; /* Use inline-flex to keep icon and text aligned */
-  align-items: center; /* Center icon and text */
-  transition: background 0.3s, transform 0.3s; /* Smooth transition */
+  background: #1e1e1e;
+  /* Dark background for buttons */
+  color: #ffffff;
+  /* White text */
+  padding: 10px 15px;
+  /* Padding for buttons */
+  border-radius: 20px;
+  /* Rounded corners */
+  text-decoration: none;
+  /* Remove underline */
+  display: inline-flex;
+  /* Use inline-flex to keep icon and text aligned */
+  align-items: center;
+  /* Center icon and text */
+  transition: background 0.3s, transform 0.3s;
+  /* Smooth transition */
 }
 
 .btn:hover {
-  background: #35c035; /* Change background on hover */
-  transform: scale(1.05); /* Slightly enlarge on hover */
-  color: #ffffff; /* Keep text color white on hover */
+  background: #35c035;
+  /* Change background on hover */
+  transform: scale(1.05);
+  /* Slightly enlarge on hover */
+  color: #ffffff;
+  /* Keep text color white on hover */
 }
 
 .navbar-brand {
